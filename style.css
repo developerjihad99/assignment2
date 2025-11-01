@@ -718,100 +718,88 @@ img {
     font-size: 1rem;
 }
 
+/* For large Screen  */
 
-
-/* Gemini Generated Codes */
-/* --- 1. Large Breakpoint (max-width: 992px) --- */
-@media (max-width: 992px) { 
-    /* Global Container Padding */
+@media screen and (max-width:992px) {
     .hero, .featured-area, .benifit-area, .our-stars-area, .our-features-area, .product-area, .footer {
         padding: 0 16px;
-    }
-    
-    /* Hero Section: কলামে স্ট্যাক করা */
-    .hero {
+    } 
+    .hero{
         flex-direction: column;
         text-align: center;
-        min-height: auto;
         padding: 64px 16px;
     }
-    .hero-text {
+    .hero-text{
         align-items: center;
         margin-bottom: 40px;
     }
-    .hero-text h1 {
-        font-size: 52px; /* ফন্ট সাইজ কমানো */
+    .hero-text h1{
+        font-size: 50px;
     }
-    .hero-btn {
+    .hero-btn{
         align-self: center;
     }
-    .hero-Image {
+    .hero-Image{
         width: 100%;
-        margin-bottom: 32px;
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
-    /* Absolute Positioning ফিক্স: ছবির নিচে সরিয়ে আনা */
-    .star-rating, .short-reveiw {
-        position: static; 
+    .star-rating, .short-reveiw{
+        position: static;
         transform: none;
-        margin: 16px auto;
-        max-width: 90%;
+        margin: 15px auto;
     }
-
-    /* Column Sections: কলামে স্ট্যাক করা */
-    .benifit, .our-stars {
+    .benifit, .our-stars{
         flex-direction: column;
         text-align: center;
     }
-    .benifit-image {
-        order: 1; 
-        margin-bottom: 32px;
+    .benifit-image{
+        order: 1;
+        margin-bottom: 30px;
     }
     .benifit-text {
         order: 2;
         max-width: 100%;
     }
     .benifit-text h2, .our-stars-title {
-        font-size: 44px; 
+        font-size: 43px; 
     }
-
-    /* Product Section: ৩টি করে দেখানো */
+    .benifit-text-top{
+        display: inline-block;
+    }
+    .our-stars-counters{
+        margin-left: 20%;
+    }
+    .our-stars-image img{
+        padding-right: 20%;
+    }
+    .features-item-title{
+    }
     .product-item {
         flex-basis: calc(33.33% - 16px); 
     }
-
-    /* Footer: 2 কলামে আনা */
-    .footer {
-        flex-wrap: wrap;
-        gap: 32px;
-        justify-content: space-around;
-        align-items: flex-start;
+    .product-top{
+        align-items: center;
     }
 }
 
+/* For Tab  */
 
-/* for tab */
-
-/* --- 2. Medium Breakpoint (max-width: 768px) --- */
-@media (max-width: 768px) { 
-    /* Header/Menu */
+@media screen and (max-width:768px){
     .header {
         flex-direction: column;
-        height: auto;
         padding-bottom: 16px;
     }
+
     .menu ul {
         margin-top: 16px;
         flex-wrap: wrap;
         justify-content: center;
         gap: 12px;
     }
-
-    /* Hero Text */
-    .hero-text h1 {
+    .hero-title{
         font-size: 36px;
     }
-    
-    /* Featured/Icon Section: 2 কলামে আনা */
     .featured {
         flex-wrap: wrap;
         justify-content: center;
@@ -820,13 +808,9 @@ img {
     .featured-item {
         flex-basis: 45%; 
     }
-    
-    /* Product: ২ কলামে আনা */
     .product-item {
         flex-basis: calc(50% - 12px);
     }
-    
-    /* Our Features: ২ কলামে আনা */
     .our-features-items {
         padding: 0;
         gap: 8px;
@@ -841,27 +825,27 @@ img {
     .benifit-text h2, .our-stars-title, .product-top h2 {
         font-size: 36px;
     }
-    
-    /* Veggie Food (Banner) */
     .veggie-food-title {
         font-size: 32px;
         padding: 0 16px;
         text-align: center;
     }
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
 }
 
-/* for mobile  */
+/* For Mobile  */
 
-/* --- 3. Small Breakpoint (max-width: 576px) --- */
-@media (max-width: 576px) { 
+@media screen and (max-width:576px){
     
-    /* General Spacing */
-    .hero-area, .featured-area, .benifit-area, .our-stars-area, .our-features-area, .product-area, .footer-area {
+.hero-area, .featured-area, .benifit-area, .our-stars-area, .our-features-area, .product-area, .footer-area {
         padding-left: 8px;
         padding-right: 8px;
     }
-    
-    /* Hero Section */
+
     .hero-text h1 {
         font-size: 30px;
     }
@@ -869,33 +853,28 @@ img {
         flex-direction: column;
         gap: 16px;
     }
-    
-    /* Headings */
+
     .benifit-text h2, .our-stars-title, .our-features-top h2, .product-top h2 {
         font-size: 30px;
     }
-
-    /* Full Width Stacking: ১ কলামে আনা */
     .featured-item, .product-item, .our-features-img, .our-features-text {
         flex-basis: 100%; 
         margin-bottom: 16px;
-        /* Featured item-এর জন্য: */
         justify-content: flex-start;
     }
     .product-item {
         margin-bottom: 24px;
     }
-    
-    /* Footer: কলামে স্ট্যাক করা */
+
     .footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 30px;
-    }
-    /* Footer Email Input ফিক্স */
+    } 
+
     .footer-email {
         display: flex;
-        flex-direction: row; /* যাতে ইনপুট ও বাটন পাশাপাশি থাকে */
+        flex-direction: row;
         width: 100%;
     }
     .footer-email input {
@@ -905,5 +884,13 @@ img {
     .footer-email-btn {
         max-width: 100px;
         min-height: 50px;
+    }
+
+    img{
+        padding: 10%;
+    }
+    .product-item{
+        padding: 10%;
+        margin: auto 10%;
     }
 }
